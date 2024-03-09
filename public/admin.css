@@ -1,0 +1,138 @@
+.red{
+    color: red;
+}
+.dash{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.sidebar{
+    flex: 2;
+    height: 100vh;
+    padding-top: 20px;
+    margin: 0;
+    border-right: 1px solid rgb(94, 93, 93);
+    border-top: 1px solid rgb(94, 93, 93);
+    background-color: rgb(4, 1, 11);   
+}
+.main-container{
+    flex: 10;
+    height: 100vh;
+    margin: 0;
+    border-top: 1px solid rgb(94, 93, 93);
+    background-color: rgb(4, 1, 11); 
+    padding: 0px 10px; 
+}
+.side-btn{
+    width: 100%;
+    background-color: rgba(56, 56, 56, 0.416);
+    color: grey;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(56, 56, 56, 0.416);
+    margin-bottom: 15px !important;
+    
+}
+.pay-con{
+   width: auto;
+}
+.side-btn:hover{
+    border: 2px solid#FFFF0C;
+}
+.custom-table{
+    background-color: black;
+    color: grey;
+    font-size: 13px;
+    border: 3px solid rgb(43, 43, 43);
+}
+th{
+    background-color: rgba(56, 56, 56, 0.416)!important;
+    
+    color: rgb(252, 252, 252) !important;
+    margin: 5px;
+    border-bottom: 3px solid rgb(43, 43, 43) !important;
+}
+td{
+    background-color:rgba(56, 56, 56, 0.416) !important;
+    color: rgb(243, 243, 243) !important;
+    border-bottom: 3px solid rgba(56, 56, 56, 0.764) !important;
+
+}
+.admin-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.admin-heading{
+    font-size: 25px;
+    margin-top: 27px;
+    color: #FFFF0C;
+}
+.bottom-nav{
+    display: none;
+}
+.b-nav-item{
+    text-align: center;
+}
+.b-nav-item>p{
+  margin: 0;
+  padding: 0;
+}
+.btm-a{
+    text-decoration: none;
+    color: white;
+}
+.all-forms{
+    width: 500px;
+    margin: 10px auto;
+}
+.invoice-color{
+    color: rgb(0, 172, 245);
+}
+@media(max-width:576px){
+   .sidebar{
+    display: none;
+   }
+   .bottom-nav{
+    display: block;
+    width: 100%;
+    background-color: rgba(32, 31, 34, 0.8); 
+    backdrop-filter: blur(10px);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 7px;
+   }
+   .main-container{
+    width:100%;
+    margin: 0;
+    padding: 0 10px;
+   }
+   .admin-heading{
+    margin-top: 10px;
+    font-size: 15px;
+   }
+   .pay-con{
+     width: 100% !important;
+     box-sizing: border-box !important;
+     justify-content: center !important;
+     /* overflow-x: auto !important; */
+     margin: 0 !important;
+   }
+   .custom-table{
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: auto !important;
+    margin: 0;
+   }
+   .all-forms{
+    width:auto;
+    margin: 10px auto;
+}
+.admin-nav-name{
+    font-size: 25px;
+}
+}

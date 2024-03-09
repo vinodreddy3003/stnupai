@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <%- include ('./navbar.ejs')%>
+
+        <div class="forms">
+            <h3>Sign in here 👋</h3>
+            <p>By proceeding, you agree to abide by our terms and conditions!!</p>
+            <button class="btn google py-2 fw-bolder my-3">Continue With Google</button>
+            <form class="register-form" method="post" action="/auth">
+                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="email">
+                <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="password">
+                <button type="submit" class="btn bg-register  text-black mt-3 px-5 py-1 fw-bolder">Sign in</button>
+            </form>
+            <p class="mt-2">Don't have an account? <a href="/register">Sign up for free here!!</a></p>
+        </div>
+
+</body>
+
+</html>

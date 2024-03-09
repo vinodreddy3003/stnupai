@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <%- include ('./adminNav.ejs')%>
+    <div class="dash">
+      <%- include ('adminSide.ejs')%>
+        <div class="main-container ">
+          <h1 class="admin-heading">All registered users</h1>
+          <div class="pay-con">
+            <table class="table custom-table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Phone Number</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Role</th>
+                </tr>
+              </thead>
+              <tbody>
+                <%for(let i=0;i< AllUsers.length;i++){ %>
+                  <tr>
+                    <th scope="row">
+                      <%= i+1%>
+                    </th>
+                    <td>
+                      <%= AllUsers[i].name%>
+                    </td>
+                    <td>
+                      <%= AllUsers[i].phoneNumber%>
+                    </td>
+                    <td>
+                      <%= AllUsers[i].email%>
+                    </td>
+                    <td>
+                      <%= AllUsers[i].role%>
+                    </td>
+                  </tr>
+                  <%}%>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <%- include ('adminMobileNav.ejs')%>
+</body>
+
+</html>

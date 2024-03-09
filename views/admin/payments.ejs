@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <%- include ('./adminNav.ejs')%>
+    <div class="dash">
+      <%- include ('adminSide.ejs')%>
+        <div class="main-container">
+          <h1 class="admin-heading">Paid users details</h1>
+          <div class="pay-con">
+            <table class="table custom-table">
+              <thead >
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Contact</th>
+                  <th scope="col">Course</th>
+                  <th scope="col">amount</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Batch</th>
+                </tr>
+              </thead>
+              <tbody>
+                <%for(let i=0;i< payment.length;i++){ %>
+                  <tr>
+                    <th scope="row">
+                      <%= i+1%>
+                    </th>
+                    <td>
+                      <%= payment[i].name%>
+                    </td>
+                    <td>
+                      <%= payment[i].email%>
+                    </td>
+                    <td>
+                      <%= payment[i].phoneNumber%>
+                    </td>
+                    <td>
+                      <%= payment[i].desc%>
+                    </td>
+                    <td>
+                      <%= payment[i].amount%>
+                    </td>
+                    <td>
+                      <%= payment[i].status%>
+                    </td>
+                    <td>
+                      <%= payment[i].date%>
+                    </td>
+                    <td>
+                      <%= payment[i].batch%>
+                    </td>
+
+                  </tr>
+                  <%}%>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <%- include ('adminMobileNav.ejs')%>
+</body>
+
+</html>

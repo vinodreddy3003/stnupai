@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+  <%- include ('adminNav.ejs')%>
+    <div class="dash">
+      <%- include ('adminSide.ejs')%>
+        <div class="main-container">
+          <div class="pay-con all-forms">
+            <h3>Add new product 👋</h3>
+            <form class="register-form justify-content-between" method="post" action="/store-product">
+              <div class="d-flex m-0 p-0" style="gap:12px">
+                <input type="text" name="title" class="form-control " id="floatingInput" placeholder="title">
+                <input type="text" name="img" class="form-control" id="floatingInput" placeholder="image url">
+              </div>
+              <div class="d-flex m-0 p-0" style="gap:12px">
+                <input type="text" name="price" class="form-control" id="floatingInput" placeholder="price">
+                <input type="text" name="status" maxlength="1" minlength="1" pattern="[01]" class="form-control"
+                  id="floatingInput" placeholder="status">
+              </div>
+              <textarea class="p-des p-2" name="desc" id="" cols="20" rows="3"
+                placeholder="course description"></textarea>
+              <button type="submit" class="btn bg-register text-black mt-3 px-5 py-1 fw-bold w-100">All
+                product</button>
+            </form>
+          </div>
+        </div>
+        <%- include ('adminMobileNav.ejs')%>
+
+</body>
+</body>
+
+</html>

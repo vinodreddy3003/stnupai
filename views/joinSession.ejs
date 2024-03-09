@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOIN NOW</title>
+</head>
+
+<body>
+    <%- include ('./navbar.ejs')%>
+
+        <div class="forms">
+            <h3>Join Now For Free Class👋</h3>
+            <p>Empower your future with web development! Enroll now and unleash your digital potential.</p>
+            <form class="register-form" method="post" action="join-session">
+                <input type="text" name="name" class="form-control" id="floatingInput" placeholder="name" required>
+                <input type="text" name="phoneNumber" maxlength="10" minlength="10"  class="form-control" id="floatingInput" placeholder="phone number" required>
+                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="email" required>
+                <input type="text" name="state" class="form-control" id="floatingInput" placeholder="state" required>
+                <button type="submit" class="btn bg-register text-black mt-3 px-5 py-1 fw-bold">Join now</button>
+            </form>
+        </div>
+
+</body>
+
+</html>

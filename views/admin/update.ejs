@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="admin.css"> -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <%- include ('adminNav.ejs')%>
+    <div class="dash">
+      <%- include ('adminSide.ejs')%>
+        <div class="main-container">
+          <div class="pay-con all-forms">
+            <h3>Update product 👋</h3>
+            <form class="register-form justify-content-between" method="post" action="/update/<%= product.id %>/?_method=PATCH">
+              <div class="d-flex m-0 p-0" style="gap:12px">
+                <input type="text" name="title" class="form-control " id="floatingInput" value="<%= product.title %>" placeholder="title">
+                <input type="text" name="img" class="form-control" id="floatingInput" value="<%= product.img %>" placeholder="image url">
+              </div>
+              <div class="d-flex m-0 p-0" style="gap:12px">
+                <input type="text" name="price" class="form-control" id="floatingInput"value="<%= product.price %>" placeholder="price">
+                <input type="text" name="status" maxlength="1" minlength="1" pattern="[01]"value="<%= product.status %>" class="form-control"
+                  id="floatingInput" placeholder="status">
+              </div>
+              <textarea class="p-des p-2" name="desc" id="" cols="20" rows="3"
+                placeholder="course description"><%= product.desc %></textarea>
+              <button type="submit" class="btn bg-register text-black mt-3 px-5 py-1 fw-bold w-100">Update
+                product</button>
+            </form>
+          </div>
+        </div>
+        <%- include ('adminMobileNav.ejs')%>
+
+</body>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>courses</title>
+    <link rel="stylesheet" href="./course.css">
+</head>
+
+<body>
+    <%- include ('./navbar.ejs')%>
+    <div class="course-container">
+            <% for(let i=0;i< products.length;i++){ %>
+           <div class="course-card">
+                        <img class="course-img" src="https://source.unsplash.com/1600x800/?<%= products[i].title%>" class="img-fluid" alt="">
+                        <div class="course-content">
+                            <h4 class="m-0 p-0 text-uppercase"><%= products[i].title%></h4>
+                            <h4 class="mt-1 fw-lighter"><span class="text-decoration-line-through">7999</span>    [<%= products[i].price%>/- only]</h4>
+                            <div class="mt-2">
+                                <a href=""><button class="course-btn fw-bloder">View more</button></a>
+                                <a href="/checkout?product=<%= products[i].title%>">
+                                    <button class="course-btn fw-bloder">Buy Now</button>
+                                </a>
+                            </div>
+                        </div>
+           </div>
+            <%}%>
+    </div>
+
+</body>
+
+</html>

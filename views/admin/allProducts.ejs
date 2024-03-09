@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <%- include ('adminNav.ejs')%>
+        <div class="dash">
+            <%- include ('adminSide.ejs')%>
+                <div class="main-container">
+                    <div class="pay-con">
+                        <h1 class="admin-heading">All registered users</h1>
+                        <div class="d-flex">
+                            <% for(let i=0; i< products.length; i++ ) { %>
+
+                                <div class="card m-3" style="width:320px">
+                                    <div class="card-body">
+                                        <img src="https://source.unsplash.com/1600x800/?<%= products[i].title%>"
+                                            class="img-fluid" alt="">
+                                        <div class="d-flex mt-2 align-items-center justify-content-between">
+                                            <h4>
+                                                <%= products[i].title%>
+                                            </h4>
+                                            <a href="/checkout?product=<%= products[i].title%>">
+                                                <button class="btn bg-primary fw-bloder">Buy Now</button>
+                                            </a>
+                                        </div>
+                                        <p>
+                                            <%= products[i].desc%>
+                                        </p>
+                                        <div class="d-flex">
+                                            <a class="mx-2" href="/update/<%= products[i].id%>"><button class="btn bg-primary">update</button></a>
+                                            <form action="/destroy/<%= products[i].id%>/?_method=DELETE" method="post">
+                                            <button type="submit" class="btn bg-primary">delete</button>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <% } %>
+                        </div>
+
+                    </div>
+                </div>
+                <%- include ('adminMobileNav.ejs')%>
+
+</body>
+</body>
+
+</html>

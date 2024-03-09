@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>courses</title>
+</head>
+
+<body>
+    <%- include ('./navbar.ejs')%>
+
+    <div class="container">
+        <h1>courses</h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="d-flex mt-2 align-items-center justify-content-between">
+                        <h4><%= product.title%></h4>
+                        <h1>full stack classes</h1>
+                        <form action="/payment-success" method="POST">
+                            <script src="https://checkout.razorpay.com/v1/checkout.js"
+                               data-key="rzp_test_i0Oi9Z6y9VOWGf"
+                               data-amount="<%= order.amount%>"
+                               data-order_id="<%= order.id%>"
+                               data-buttontext="pay <%= order.amount/100%> Now"
+                               data-description="<%= product.title%>"
+                               data-image=""
+                               data-prefill.name="<%= user.name%>"
+                               data-prefill.email="<%= user.email%>"
+                               data-prefill.contact="<%= user.phoneNumber%>"
+                               data-theme.color="#0066ff"
+                               ></script>
+                               <input type="hidden"  custom="Hidden Element" name="productId" value="<%= product.id  %>">
+                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+
+</html>

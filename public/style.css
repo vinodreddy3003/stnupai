@@ -1,0 +1,207 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color:RGB(15, 15, 15);
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+.bg-color{
+    background-color:RGB(32, 32, 32) ;
+}
+.navbar-toggler{
+    border: none !important;
+    outline: none !important;
+    margin: 0;
+    background-color: #FFFF0C;
+    border-radius: 1px;
+}
+.navbar-brand{
+    color:#FFFF0C;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.navbar-brand:hover{
+    color:#FFFF0C;
+}
+.login-btn{
+    display: none;
+    background-color:#FFFF0C;
+    padding: 2px 10px;
+    border-radius: 1px;
+    margin-left: 60px;
+    font-weight: bold;
+}
+.login-btn:hover{
+    background-color:#FFFF0C;
+}
+.lap-login{
+    font-weight: bold;
+    background-color: #FFFF0C;
+    border-radius: 1px;
+}
+.lap-reg{
+    width: 140px;
+    padding: 6px 3px;
+    font-weight: bold;
+    background-color: #FFFF0C;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    border-radius: 20px;
+}
+.bi{
+    color: #FFFF0C;
+}
+/* --------------nav-bar completed--------------- */
+/* --------------register form start--------------- */
+.register-form{
+   color: black;
+}
+.register-form>input{
+    background-color:RGB(15, 15, 15);
+    outline: none;
+    border: 1px solid rgb(62, 62, 62);
+    border-radius: 1px;
+    margin-top: 15px;
+    padding: 13px 10px;
+    color: white;
+}
+
+ .register-form>input:focus{
+    outline: none;
+    background-color:RGB(15, 15, 15);
+    box-shadow: none;
+    border:1px solid grey;
+    color: white;
+
+ }
+ 
+ 
+ .register-form>div>input::placeholder{
+    color: grey;
+ }
+ .bg-register{
+    background-color: #FFFF0C;
+    border-radius: 5px;
+    border: 2px solid #FFFF0C;
+ }
+ .bg-register:hover{
+    /* background-color: #FFFF0C; */
+    border-radius: 5px;
+    border: 2px solid blue;
+    color: white !important;
+
+ }
+/* --------------register form end --------------- */
+/* --------------login form start --------------- */
+
+ .google{
+    background-color: blue;
+    width: 100%;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid blue;
+
+ }
+ .google:hover{
+    /* background-color: blue; */
+    width: 100%;
+    border: 2px solid blue;
+    color: white;
+ }
+/* --------------login form end --------------- */
+.register-form>div>input{
+    background-color:RGB(15, 15, 15);
+    outline: none;
+    border: 1px solid rgb(62, 62, 62);
+    border-radius: 4px;
+    margin-top: 15px;
+    padding: 13px 10px;
+    color: white;
+
+}
+.register-form>div>input:focus{
+    outline: none;
+    background-color:RGB(15, 15, 15);
+    box-shadow: none;
+    border:1px solid grey;
+    color: white;
+
+ }
+ .register-form>input::placeholder{
+    color: grey;
+ }
+ .p-des{
+    background-color:RGB(15, 15, 15);
+    outline: none;
+    border: 1px solid rgb(62, 62, 62);
+    border-radius: 4px;
+    margin-top: 15px;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+.p-des:focus{
+    outline: none;
+    background-color:RGB(15, 15, 15);
+    box-shadow: none;
+    border:1px solid grey;
+    color: white;
+}
+.p-des::placeholder{
+    color: grey;
+
+}
+.forms{
+    width: 440px;
+    margin: 10px auto;
+}
+.close-btn{
+    color: #FFFF0C !important;
+    background-color: #FFFF0C;
+    margin-right: 10px !important;
+}
+a{
+    text-decoration: none;
+}
+.user-profile{
+    width: 45px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    font-weight: bolder;
+    border: 1px solid rgb(29, 1, 39);
+    text-transform: uppercase;
+    margin-left: 10px;
+    font-size: 30px;
+    color: rgb(251, 251, 251);
+    background-color: rgb(82, 2, 255);
+}
+
+/* -------------mobile-screen start---------------------- */
+@media(max-width:576px){
+    .login-btn{
+        display: block;
+    }
+    .reg-log{
+        display: none;
+    }
+    .forms{
+        width: auto;
+        margin: 10px;
+    }
+    .user-profile{
+        width: 40px;
+        height: 40px;
+        border-radius: 0px;
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+
+}

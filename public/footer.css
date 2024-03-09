@@ -1,0 +1,35 @@
+.foot-name{
+    color: rgb(255, 255, 0);
+    font-weight: bolder;
+}
+footer{
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #1f1f1f;
+    text-align: center;
+}
+.footer-content>a{
+    margin: 0px 10px;
+    text-decoration: none;
+    color: white;
+}
+.insta-icons>a{
+    margin: 0px 10px;
+    text-decoration: none;
+    font-size: 30px;
+}
+.footer-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media(max-width:576px){
+    .footer-flex{
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .insta-icons{
+        margin-top: 20px;
+    }
+}

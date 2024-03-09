@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="./contact.css">
+</head>
+
+<body>
+    <%- include ('./navbar.ejs')%>
+
+    <div class="contact-con">
+        <h1 class="text-center mt-5">Meet the coders behind STNUP</h1>
+        <div class="contact-cards-flex">
+            <div class="contact-card text-center">
+              <img src="./images/director.jpeg" alt="">
+              <h3 class="mt-2">Dr.HRD Ph.D.</h3>
+              <h5>Director At STNUP</h5>
+            </div>
+            <div class="contact-card text-center con-card-2">
+              <img src="./images/prasanth.jpeg" alt="">
+              <h3 class="mt-2">PK. NANDY</h3>
+              <h5>Founder At STNUP</h5>
+            </div>
+        </div>
+        <div class="address-flex">
+          <div class="con-details">
+            <h4>Contact</h4>
+            <a href="tel:7013595855">7013595855 (or)</a>
+            <a href="tel:8143159889">8143159889</a>
+            <p>MON-SUN , 8am-9pm</p>
+          </div>
+          <div class="con-details">
+            <h4>Email</h4>
+            <a href="mailto:stnuptraining@gmail.com">stnuptraining@gmail.com</a>
+            <a href="mailto:stnuptrainingoffice@gmail.com">stnuptrainingoffice@gmail.com</a>
+          </div>
+          <div class="con-details">
+            <h4>Visit</h4>
+            <p class="m-0 p-0">VV Plaza,Reddy Reddy colony</p>
+            <p class="m-0 p-0">Tirupati,Andhra pradesh,India</p>
+          </div>
+        </div>
+        
+    </div>
+    <%- include ('footer.ejs')%>
+
+</body>
+
+</html>
