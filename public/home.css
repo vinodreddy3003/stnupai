@@ -155,7 +155,7 @@
 }
 @media (max-width: 576px) {
   .home-con {
-    width: 100%;
+    width:auto;
     height: auto;
     background-image: none;
     text-align: center;
@@ -170,7 +170,10 @@
   }
   .punch-img {
     display: block;
-    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     height: 300px;
     object-fit: contain;
     margin: 0px auto;
