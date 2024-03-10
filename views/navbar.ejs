@@ -15,15 +15,15 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-color">
     <div class="container d-flex justify-content-space-between align-items-center bg-color">
-      <a class="navbar-brand" href="/">STNUP[AI]</a>
+      <a class="navbar-brand" href="/">STNUP</a>
       <% if(user){ %>
         <a href="/logout"><button type="button" class="btn login-btn">
-            signout
+            LogOut
           </button></a>
         <% }else{ %>
           <a href="/login">
             <button type="button" class="btn login-btn">
-              Sign in
+              LogIn
             </button>
           </a>
           <% } %>
@@ -60,7 +60,7 @@
                   <a class="nav-link lap-reg  mx-2" aria-current="page" href="/access-product">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link lap-login px-4 py-1 " href="/logout">Sign out</a>
+                  <a class="nav-link lap-login px-4 py-1 " href="/logout">LogOut</a>
                 </li>
                 <li class="nav-item">
                   <a class="user-profile"><%= user.name[0] %></a>
@@ -69,10 +69,10 @@
               <% } else{ %>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center reg-log">
                   <li class="nav-item">
-                    <a class="nav-link lap-reg  mx-2" aria-current="page" href="/register">Sign up</a>
+                    <a class="nav-link lap-reg  mx-2" aria-current="page" href="/register">Register</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link lap-login px-4 py-1 " href="/login">Sign in</a>
+                    <a class="nav-link lap-login px-4 py-1 " href="/login">LogIn</a>
                   </li>
                 </ul>
                 <% } %>
@@ -82,7 +82,7 @@
   <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasExample"
     aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-      <a class="navbar-brand" href="/">STNUP[AI]</a>
+      <a class="navbar-brand" href="/">STNUP</a>
       <button type="button" class="btn-close close-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body ">
@@ -99,7 +99,7 @@
         </li>
         <% if(user){ %>
           <li class="nav-item d-flex align-items-center">
-            <a class="user-profile" href="/access-product"><%= user.name[0] %></a>
+            <a class="user-profile" href="/access-product"><i class="bi bi-person-fill-lock"></i></a>
             <a class="nav-link text-white" href="/access-product">
               Dashboard
             </a>
@@ -108,7 +108,7 @@
           <% }else{ %>
             <li  class="nav-item">
               <a class="nav-link text-white" href="/register">
-                <i class="bi bi-person-circle"></i> Sign up
+                <i class="bi bi-person-circle"></i> Register
               </a>
             </li>
             <% } %>
