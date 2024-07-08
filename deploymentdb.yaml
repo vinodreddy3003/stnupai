@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myappdb
+spec:
+  selector:
+    matchLabels:
+      app: myappdb
+  template:
+    metadata:
+      labels:
+        app: myappdb
+    spec:
+      containers:
+      - name: myappdb
+        image: vinod200103/node-app:latest
+        ports:
+        - containerPort: 27017
+        env:
+          - name:  USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: mongo-secret
+                key:  username 
+          - name:  PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mongo-secret
+                key:  password
+                   
+             

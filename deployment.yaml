@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: vinod200103/mongo:1.0
+        ports:
+        - containerPort: 4000
+        env:
+        - name: USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: username
+        - name: PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: password
+        - name: HOST
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: host  
+        - name: PORT
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: port   
+        - name: DB
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: db
